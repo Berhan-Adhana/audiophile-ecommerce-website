@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* npx tailwindcss -i ./src/index.css -o ./src/css/styles.css --watch  */
+
+/* Global styles */
+@layer base {
+  /* --------------------Body--------------------- */
+  body {
+    @apply font-manrope font-medium text-[15px] leading-[25px]  text-black/50 mix-blend-normal transition-all duration-500;
+  }
+
+  /* Typography */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply uppercase font-bold text-black;
+  }
+  h1 {
+    @apply text-[36px] leading-[40px] tracking-[1.29px] md:text-[56px] md:leading-[58px] md:tracking-[2px];
+  }
+  h2 {
+    @apply text-[28px] leading-[38.25px] tracking-[1px] md:text-[40px] md:leading-[44px] md:tracking-[1.5px];
+  }
+  h3 {
+    @apply text-[28px] leading-[38.25px] tracking-[1px] md:text-[32px] md:leading-9 md:tracking-[1.15px];
+  }
+  h4 {
+    @apply text-[28px] leading-[38px] tracking-[2px] md:text-[40px] md:leading-[44px] md:tracking-[1.43px];
+  }
+  h5 {
+    @apply text-[24px] leading-[36px] tracking-[0.86px] md:text-[32px] md:tracking-[1.14pxpx];
+  }
+  h6 {
+    @apply text-[18px] leading-6 tracking-[1.3px];
+  }
+
+  /* --------------------Container---------------------------- */
+  .app-container {
+    @apply mx-auto xs:w-[327px] md:w-[689px] lg:w-[900px] max-w-[1110px];
+  }
+  .subtitle,
+  .overline {
+    @apply uppercase;
+  }
+  .overline {
+    @apply font-[400] text-[14px] leading-[19px] tracking-[10px];
+  }
+  .subtitle {
+    @apply font-bold text-[13px] leading-[25px] tracking-[1px];
+  }
+  .menu-items {
+    @apply text-[13px] leading-[25px] tracking-[2px] font-bold;
+  }
+
+  /* --------------------Buttons--------------------- */
+  .btn {
+    @apply px-8 py-[15px] uppercase font-bold text-[13px] leading-[18px] tracking-[1px] transition-colors duration-500;
+  }
+  .block-level {
+    @apply block w-full;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-accent;
+  }
+
+  .btn-secondary {
+    @apply bg-black text-white border-[1px] border-solid border-black hover:bg-white hover:text-black;
+  }
+  .btn-outline {
+    @apply bg-white text-black border-[1px] border-solid border-black hover:bg-black hover:text-white;
+  }
+
+  .btn-plain {
+    @apply whitespace-nowrap inline-block text-black mix-blend-normal opacity-50 after:content-['>'] after:ml-2 after:h-full after:text-center after:my-[15px] after:inline-block  after:text-primary hover:text-primary;
+  }
+  /* -------------------Ends Here------------------------- */
+}
